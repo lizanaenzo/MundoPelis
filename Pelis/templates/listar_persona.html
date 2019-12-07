@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Listar Persona</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>Nombre</td>
+				<td>Apellidos</td>
+				<td>Direccion</td>
+				<td>Email</td>
+				<td>Mensaje</td>
+			</tr>
+		</thead>
+		<tbody>
+			{% for persona in object_list %}
+			<tr>
+				<td>{{persona.nombres}}</td>
+				<td>{{persona.apellidos}}</td>
+				<td>{{persona.direccion}}</td>
+				<td>{{persona.email}}</td>
+				<td>{{persona.mensaje}}</td>
+				{% endfor %}
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
